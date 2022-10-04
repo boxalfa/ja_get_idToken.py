@@ -1,4 +1,4 @@
-# ja_get_idToken.py
+# jq_api_get_idToken.py
 J-QuantsAPIベータ版で、IDトークンを取得するお試しプログラム 
 
 1）動作テストを実行した環境は、os: Centos7.4、python: 3.6.8 です。
