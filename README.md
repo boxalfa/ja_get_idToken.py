@@ -4,6 +4,12 @@ J-QuantsAPIベータ版で、IDトークンを取得するお試しプログラ�
 1）動作テストを実行した環境は、os: Centos7.4、python: 3.6.8 です。
 
 ２）実行はコマンドプロンプト等からpython環境で起動してください。
+  
+  # リフレッシュトークン保存ファイル名: 'jq_rftoken.json'
+  # データ形式: {"time_rftoken":"YYYY-mm-dd HH:MM:SS.ffffff","refreshToken":"value"}
+  
+  # ＩＤトークン出力ファイル名: 'jq_idtoken.json'
+  # データ形式: {"time_idToken":"YYYY-mm-dd HH:MM:SS.ffffff","idToken":"value"}
 
 ３）本プログラムは自由にご使用ください。
 
