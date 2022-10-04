@@ -102,11 +102,14 @@ time_idtoken = datetime.datetime.now()
 # IDトークン取得
 r_post_idtoken = requests.post(str_url_idtoken)
 dic_idtoken = json.loads(r_post_idtoken.text)  # 辞書型に変換
-str_idtoken = dic_idtoken.get('idToken')    # ＩＤトークンのvalueを取得
-# リフレッシュトークンが正しくない場合、有効期限切れの場合
-if str_idtoken is None :
-    print(dic_idtoken.get('message'))
-    quit()
+
+if r_post_idtoken.status_code == 200 :
+    # 正常にＩＤトークンを取得
+    str_idtoken = dic_idtoken.get('idToken')    # ＩＤトークンのvalueを取得
+else :
+    # ＩＤを取得できなかった場合
+    print('message :', dic_idtoken.get('message'))
+    quit()  # 終了
 
 
 # 取得時刻とＩＤトークンを保存
@@ -127,4 +130,3 @@ expire_span = datetime.timedelta(days=1)
 expire_time = time_idtoken + expire_span
 print('expiry date:', expire_time)
 print('IDトークンの有効期間は２４時間です。')
-
