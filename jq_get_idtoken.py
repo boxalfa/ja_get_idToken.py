@@ -76,7 +76,6 @@ str_rftoken = dic_rf_json.get('refreshToken')
 
 # ＩＤトークン取得用urlの作成
 str_url_auth_refresh = 'https://api.jpx-jquants.com/v1/token/auth_refresh'
-##str_url_idtoken = str_url_auth_refresh + '?' + 'refreshtoken=' + str_rftoken
 str_url_idtoken = str_url_auth_refresh + '?' + 'refreshtoken=' + str_rftoken
 
 
